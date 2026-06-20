@@ -13,6 +13,7 @@ import Services from './components/Services';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AIAgentWidget from './components/AIAgentWidget';
 
 function LoadingScreen({ done }: { done: boolean }) {
   return (
@@ -60,7 +61,7 @@ function ScrollToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-8 right-6 p-3 bg-primary-600 hover:bg-primary-500 rounded-xl text-white shadow-xl shadow-primary-500/30 z-40 transition-colors"
+      className="fixed bottom-5 left-4 sm:left-6 p-3 bg-dark-800 border border-dark-700 hover:border-primary-500/50 hover:bg-primary-500/5 rounded-xl text-white shadow-xl shadow-black/30 z-40 transition-colors"
       aria-label="Back to top"
     >
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,6 +98,7 @@ export default function App() {
       </main>
       <Footer />
       <ScrollToTop />
+      <AIAgentWidget />
     </div>
   );
 }
